@@ -3,7 +3,7 @@ name: SonarCloud Back
 on: [push, pull_request]
 
 jobs:
-  build:
+  sonarcloud:
     name: Build and analyze
     runs-on: ubuntu-latest
     defaults:
