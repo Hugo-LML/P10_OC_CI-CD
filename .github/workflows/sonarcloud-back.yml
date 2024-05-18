@@ -7,7 +7,7 @@ on:
     types: [opened, synchronize, reopened]
 jobs:
   build:
-    name: Build and analyze backend
+    name: Build and analyze back
     runs-on: ubuntu-latest
     defaults:
       run:
