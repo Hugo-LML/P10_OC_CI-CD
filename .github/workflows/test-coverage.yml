@@ -34,7 +34,7 @@ jobs:
           git fetch --all
           git checkout develop
           git pull
-          git add target/site
+          git add back/target/site
           git commit -m 'feat(coverage): jacoco report added'
           git push
 
@@ -68,6 +68,6 @@ jobs:
           git fetch --all
           git checkout develop
           git pull
-          git add coverage/bobapp
+          git add front/coverage/bobapp
           git commit -m 'feat(coverage): coverage report added'
           git push
