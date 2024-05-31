@@ -1,11 +1,16 @@
 HELP.md
-target/
+back/target/classes/
+back/target/generated-sources
+back/target/generated-test-sources
+back/target/maven-status
+back/target/surefire-reports
+back/target/test-classes
+back/target/jacoco.exec
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 node_modules/
 dist/
-coverage/
 
 ### STS ###
 .apt_generated

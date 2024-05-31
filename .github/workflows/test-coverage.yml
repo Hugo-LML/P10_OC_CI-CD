@@ -27,11 +27,16 @@ jobs:
           cd ./back
           mvn jacoco:report
           
-      - name: Upload Jacoco Report
-        uses: actions/upload-artifact@v4
-        with:
-          name: jacoco-report
-          path: back/target/site/jacoco
+      - name: Commit Jacoco Report
+        run: |
+          git config --global user.email "hlml200294@gmail.com"
+          git config --global user.name "Hugo-LML"
+          git fetch --all
+          git checkout develop
+          git pull
+          git add back/target/site
+          git commit -m 'feat(coverage): jacoco report added'
+          git push
 
   frontend:
     name: Run Coverage Tests - Front
@@ -56,8 +61,13 @@ jobs:
           cd ./front
           npm run test-coverage
 
-      - name: Upload Coverage Report 
-        uses: actions/upload-artifact@v4
-        with:
-          name: coverage-report
-          path: front/coverage/bobapp
+      - name: Commit Coverage Report 
+        run: |
+          git config --global user.email "hlml200294@gmail.com"
+          git config --global user.name "Hugo-LML"
+          git fetch --all
+          git checkout develop
+          git pull
+          git add front/coverage/bobapp
+          git commit -m 'feat(coverage): coverage report added'
+          git push
